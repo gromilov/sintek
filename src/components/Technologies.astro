@@ -1,0 +1,69 @@
+---
+import Title from './Title.astro';
+const items = [
+  { title: 'Разработка Backend', text: 'ASP.NET Core, .NET 6'},
+  { title: 'Разработка Frontend', text: 'Vue2, React'},
+  { title: 'Архитектура БД', text: 'SQL Server, Postgresql, MongoDB, Redis'},
+  { title: 'Мобильная разработка', text: 'React Native'},
+  { title: 'Devops', text: 'kubernetes, win, nix, docker'},
+  
+]
+---
+<div class="tech">
+  <div class="container">
+    <Title subtitle="Технологии" title="Наши возможности" />
+    <div class="tech__list">
+    {items.map(({title, text}) => (
+      <div class="tech__list-item">
+        <div class="tech__list-item__title">{title}</div>
+        <div class="tech__list-item__text">{text}</div>
+      </div>
+    ))}
+    </div>
+  </div>
+</div>
+<style lang="sass">
+.tech
+  &__list
+    display: flex
+    gap: 20px
+    flex-wrap: wrap
+    justify-content: center
+    @media only screen and (max-width : 768px)
+      display: grid
+      grid-template-columns: repeat(1, 1fr)
+      grid-column-gap: 20px
+      grid-row-gap: 20px
+    &-item
+      background: linear-gradient(59.3deg, #FFE3C9 2.74%, rgba(255, 221, 190, 0.5) 114.97%)
+      border-radius: 10px
+      padding: 24px
+      flex: 0 0 calc(33.3% - 20px)
+      &__title
+        font-family: 'Ubuntu'
+        font-style: normal
+        font-weight: 500
+        font-size: 18px
+        line-height: 21px
+        color: #463E2F
+      &__text
+        font-family: 'Ubuntu'
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 16px
+        color: rgba(70, 62, 47, 0.8)
+  &__description
+    font-family: 'Ubuntu'
+    font-style: normal
+    font-weight: 300
+    font-size: 20px
+    line-height: 25px
+    text-align: center
+    color: rgba(7, 7, 75, 0.6)
+    margin-bottom: 64px
+    &__text
+      display: inline-block
+      max-width: 613px
+</style>
+  

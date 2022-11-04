@@ -1,0 +1,71 @@
+---
+import Title from './Title.astro';
+const items = [
+  { title: 'Ротапост', text: 'Биржа ссылок'},
+  { title: 'e-Payments', text: 'Платежная система'},
+  { title: 'Sape', text: 'Инструменты для рекламы, заработка в интернет'},
+  { title: 'FenixFenix', text: ' Платежная система'},
+  { title: 'KSM’s', text: 'Мобильные игры'}
+]
+---
+<div class="experience">
+  <div class="container">
+    <Title subtitle="Опыт" title="Наши заказчики и партнеры" />
+    <div class="experience__list">
+    {items.map(({title, text}) => (
+      <div class="experience__list-item">
+        <div class="experience__list-item__title">{title}</div>
+        <div class="experience__list-item__text">{text}</div>
+      </div>
+    ))}
+    </div>
+  </div>
+</div>
+
+<style lang="sass">
+.experience
+  &__list
+    display: flex
+    gap: 20px
+    flex-wrap: wrap
+    justify-content: center
+    @media only screen and (max-width : 768px)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-column-gap: 10px
+      grid-row-gap: 10px
+    &-item
+      background: linear-gradient(59.3deg, #2787F5 2.74%, #6ED021 114.97%)
+      border-radius: 10px
+      padding: 24px 28px
+      flex: 0 0 calc(33.3% - 20px)
+      @media only screen and (max-width : 768px)
+        padding: 24px 12px
+      &__title
+        font-family: 'Ubuntu'
+        font-style: normal
+        font-weight: 700
+        font-size: 20px
+        line-height: 23px
+        color: #ffffff
+      &__text
+        font-family: 'Ubuntu'
+        font-style: normal
+        font-weight: 400
+        font-size: 14px
+        line-height: 16px
+        color: #ffffff
+  &__description
+    font-family: 'Ubuntu'
+    font-style: normal
+    font-weight: 300
+    font-size: 20px
+    line-height: 25px
+    text-align: center
+    color: rgba(7, 7, 75, 0.6)
+    margin-bottom: 64px
+    &__text
+      display: inline-block
+      max-width: 613px
+</style>
+  

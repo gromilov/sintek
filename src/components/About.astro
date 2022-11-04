@@ -1,0 +1,83 @@
+---
+import Title from './Title.astro';
+const items = [
+  { title: '01', text: '14 лет разработки и сопровождения проектов'},
+  { title: '02', text: '25+ разработчиков в штате'},
+  { title: '03', text: 'Десятки готовых решений под разные отрасли'},
+  { title: '04', text: 'Только проверенные современные технологии'},
+  { title: '05', text: 'Стабильный и гарантированный результат'},
+  { title: '06', text: 'Высокий уровень ведения проектов'},
+]
+---
+
+<div class="about">
+  <div class="container">
+    <Title subtitle="Компания" title="Наши возможности" />
+    <div class="about__description">
+      <div class="about__description__text">
+       С 2008 года было успешно реализовано сотни проектов на заказ и 5+ проектов в собственной группе компаний
+      </div>
+   </div>
+    <div class="about__list">
+    {items.map(({title, text}) => (
+      <div class="about__list-item">
+        <div class="about__list-item__number">{title}.</div>
+        <div class="about__list-item__text">{text}</div>
+      </div>
+    ))}
+    </div>
+  </div>
+</div>
+
+<style lang="sass">
+.about
+  &__list
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-column-gap: 60px
+    grid-row-gap: 40px
+    @media only screen and (max-width : 768px)
+      grid-template-columns: repeat(2, 1fr)
+      grid-column-gap: 20px
+      grid-row-gap: 40px
+    &-item
+      &__number
+        font-family: 'Ubuntu'
+        font-style: normal
+        font-weight: 500
+        font-size: 42px
+        line-height: 48px
+        display: flex
+        align-items: flex-end
+        color: rgba(7, 7, 75, 0.8)
+        margin-bottom: 6px
+        @media only screen and (max-width : 768px)
+          line-height: 36px
+      &__text
+        font-family: 'Ubuntu' 
+        font-style: normal
+        font-weight: 300
+        font-size: 18px
+        line-height: 23px
+        color: rgba(7, 7, 75, 0.8)
+        @media only screen and (max-width : 768px)
+          font-weight: 300
+          font-size: 14px
+          line-height: 21px
+  &__description
+    font-family: 'Ubuntu'
+    font-style: normal
+    font-weight: 300
+    font-size: 20px
+    line-height: 25px
+    text-align: center
+    color: rgba(7, 7, 75, 0.6)
+    margin-bottom: 64px
+    @media only screen and (max-width : 768px)
+      font-size: 16px
+      line-height: 21px
+    &__text
+      display: inline-block
+      max-width: 613px
+</style>
+  

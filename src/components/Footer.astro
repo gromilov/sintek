@@ -1,0 +1,103 @@
+---
+const today = new Date();
+---
+
+<footer class="footer">
+	<div class="container">
+		<div class="footer__copy">
+			sintek &copy; {today.getFullYear()}
+		</div>
+		<div class="footer__list">
+			<div class="footer__list__row">
+				<div class="footer__list-item">
+					<div class="footer__list-item__title">
+						Почтовый адрес:
+					</div>
+					<div class="footer__list-item__text">
+						Россия, 300041, г. Тула, а/я 1941
+					</div>
+				</div>
+				<div class="footer__list-item">
+					<div class="footer__list-item__title">
+						тел/факс: 
+					</div>
+					<div class="footer__list-item__text">
+						<a href="tel:+7 (4872) 71 61 97">+7 (4872) 71 61 97</a>
+					</div>
+				</div>
+			</div>
+			<div class="footer__list__row">
+				<div class="footer__list-item">
+					<span class="footer__list-item__title">
+						ОКПО: 
+					</span>
+					<span class="footer__list-item__text">
+						83944394
+					</span>
+				</div>
+				<div class="footer__list-item">
+					<span class="footer__list-item__title">
+						ОГРН:
+					</span>
+					<span class="footer__list-item__text">
+						1087154006389
+					</span>
+				</div>
+				<div class="footer__list-item">
+					<span class="footer__list-item__title">
+						ИНН / КПП 7107505342 / 710701001
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="footer__cookies">
+			<div class="footer__cookies__title">
+				Использование cookies
+			</div>
+			<div class="footer__cookies__text">
+				Посещая сайт sintek.ru, вы предоставляете согласие на обработку данных в соответствии с политикой конфиденциальности.
+			</div>
+		</div>
+	</div>
+	
+</footer>
+<style lang="sass">
+.footer
+	background: #FFEFE0
+	padding-top: 38px
+	padding-bottom: 24px
+	margin-top: 184px
+	&__list 
+		display: flex
+		gap: 48px
+		@media only screen and (max-width : 768px)
+			display: block
+		&-item
+			font-family: 'Ubuntu'
+			font-style: normal
+			font-weight: 400
+			font-size: 12px
+			line-height: 20px
+			color: rgba(7, 7, 75, 0.4)
+			margin-bottom: 12px
+			a 
+				color: rgba(7, 7, 75, 0.7)
+	&__copy
+		color: rgba(7, 7, 75, 0.8)
+		margin-bottom: 28px
+	&__cookies
+		margin-top: 71px
+		&__title
+			font-style: normal
+			font-weight: 400
+			font-size: 14px
+			line-height: 16px
+			margin-bottom: 8px
+			color: rgba(7, 7, 75, 0.6)
+		&__text
+			font-style: normal
+			font-weight: 400
+			font-size: 12px
+			line-height: 14px
+			color: rgba(7, 7, 75, 0.4)
+</style>

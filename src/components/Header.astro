@@ -1,0 +1,83 @@
+---
+import Logo from './Logo.astro';
+import { SITE_TITLE } from '../config';
+---
+
+<header>
+	<div class="header">
+		<div class="container">
+			<div class="header__logo">
+				<Logo />
+			</div>
+			<h1 class="header__title">
+				Ваш проект<br> достигнет высот
+			</h1>
+			<svg width="84" class="header__hr" height="2" viewBox="0 0 84 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 1H84" stroke="white" stroke-opacity="0.2"/>
+			</svg>
+			<p class="header__text">Разработка и сопровождение digital проектов</p>
+		</div>
+	</div>
+</header>
+
+<style lang="scss">
+	.header {
+		&__hr {
+			display: none;
+			@media only screen and (max-width : 768px) { 
+				display: inline;
+			}
+		}
+		width: 100%;
+		background: url('/header.jpg');
+		background-repeat: no-repeat;
+    background-position: center;
+		height: 900px;
+		text-align: center;
+		padding-top: 35px;
+		color: white;
+		@media only screen and (max-width : 768px) { 
+			padding-top: 0px;
+			text-align: left;
+			height: 534px;
+			display: flex;
+			align-items: center;
+			background: url('/header-m.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		&__text {
+			font-family: 'Ubuntu';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 28px;
+			@media only screen and (max-width : 768px) { 
+				font-family: 'Ubuntu';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 18px;
+				display: flex;
+				max-width: 255px;
+				margin: 0;
+			}
+		}
+			
+		&__title {
+			padding-top: 210px;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 56px;
+			line-height: 64px;
+
+			@media only screen and (max-width : 768px) { 
+				padding-top: 54px;
+				margin: 0;
+				font-size: 24px;
+				line-height: 28px;
+			}
+		}
+
+	}
+</style>
